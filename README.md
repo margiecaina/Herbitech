@@ -1,6 +1,9 @@
 # herbitect_protoype1
 
-A new Flutter project.
+DEVELOPMENT OF HERBITECH: A MOBILE APPLICATION FOR HERBAL PLANT HEALTH MONITORING IN DISEASE DETECTION AND REMEDIATION WITH IMAGE DETECTION ALGORITHM
+
+https://github.com/user-attachments/assets/46265b7c-2680-4fad-9ced-7d5aa7257f4f
+
 
 ## Getting Started
 
