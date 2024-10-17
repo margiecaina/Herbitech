@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "806262359764",
+    "project_id": "herbitect-ae294",
+    "storage_bucket": "herbitect-ae294.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:806262359764:android:006bcffab69de0e9081d41",
+        "android_client_info": {
+          "package_name": "com.example.herbitect_protoype1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCG8hRGCsssDf8-jugy-BNm9TOwJxbvC14"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
