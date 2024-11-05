@@ -2,14 +2,14 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-class Page5 extends StatefulWidget {
-  const Page5({super.key});
+class ProfilePage extends StatefulWidget {
+  const ProfilePage({super.key});
 
   @override
-  State<Page5> createState() => _Page5State();
+  State<ProfilePage> createState() => _ProfilePageState();
 }
 
-class _Page5State extends State<Page5> {
+class _ProfilePageState extends State<ProfilePage> {
   String username = '';
   String email = '';
   bool isLoading = true;

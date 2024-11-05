@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:herbitect_protoype1/bottom_navbar/scan.dart';
 
+import 'bottom_navbar/inventory.dart';
 import 'bottom_navbar/profile.dart';
 
 class HomePage extends StatefulWidget {
@@ -17,11 +18,11 @@ class _HomePageState extends State<HomePage> {
 
   // Define the five pages
   final List<Widget> _pages = [
-    const Page1(),
-    const Page2(),
-    const ScanPage(),
-    const Page4(),
-    const Page5(),
+    const HistoryPage(),
+    const MonitorPage(),
+    ScanPage(),
+    const InventoryPage(),
+    const ProfilePage(),
   ];
 
   @override
@@ -106,8 +107,8 @@ class _HomePageState extends State<HomePage> {
 }
 
 // First Page (History)
-class Page1 extends StatelessWidget {
-  const Page1({super.key});
+class HistoryPage extends StatelessWidget {
+  const HistoryPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -121,8 +122,8 @@ class Page1 extends StatelessWidget {
 }
 
 // Second Page (Monitor)
-class Page2 extends StatelessWidget {
-  const Page2({super.key});
+class MonitorPage extends StatelessWidget {
+  const MonitorPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -134,39 +135,3 @@ class Page2 extends StatelessWidget {
     );
   }
 }
-
-// Third Page (Scan)
-class Page3 extends StatefulWidget {
-  const Page3({super.key});
-
-  @override
-  State<Page3> createState() => _Page3State();
-}
-
-class _Page3State extends State<Page3> {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Scan',
-        style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-      ),
-    );
-  }
-}
-
-// Fourth Page (Inventory)
-class Page4 extends StatelessWidget {
-  const Page4({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Inventory',
-        style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-      ),
-    );
-  }
-}
-
