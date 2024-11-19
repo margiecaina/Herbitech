@@ -20,6 +20,9 @@ class _RegisterPageState extends State<RegisterPage> {
   final _userNameController = TextEditingController();
   DateTime? _selectedDate;
 
+  // role selection
+  String _role = 'Student'; // default value
+
   @override
   void dispose() {
     _emailController.dispose();
@@ -34,7 +37,7 @@ class _RegisterPageState extends State<RegisterPage> {
       try {
         // Sign up user
         UserCredential userCredential =
-            await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        await FirebaseAuth.instance.createUserWithEmailAndPassword(
           email: _emailController.text.trim(),
           password: _passwordController.text.trim(),
         );
@@ -44,6 +47,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
         // Store user details in Firestore
         await addUserDetails(
+          _role, // Store the role selected by the user
           _userNameController.text.trim(),
           _selectedDate != null
               ? DateTime.now().difference(_selectedDate!).inDays ~/ 365
@@ -76,9 +80,10 @@ class _RegisterPageState extends State<RegisterPage> {
   }
 
   Future addUserDetails(
-      String username, int age, String email, String uid) async {
+      String role, String username, int age, String email, String uid) async {
     // Store user information in Firestore using the UID as the document ID
     await FirebaseFirestore.instance.collection('users').doc(uid).set({
+      'role': role, // Add role field in Firestore
       'username': username,
       'age': age,
       'email': email,
@@ -146,6 +151,87 @@ class _RegisterPageState extends State<RegisterPage> {
                     fontSize: 20,
                   ),
                 ),
+                const SizedBox(height: 20),
+                // Role selection radio buttons
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                 /* child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly, // Distribute space evenly
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            _role = 'Student'; // Set role to Student when tapped
+                          });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: _role == 'Student' ? Colors.green : Colors.grey[300],
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(
+                              color: _role == 'Student' ? Colors.green : Colors.grey,
+                            ),
+                          ),
+                          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Radio<String>(
+                                value: 'Student',
+                                groupValue: _role,
+                                onChanged: (value) {
+                                  setState(() {
+                                    _role = value!;
+                                  });
+                                },
+                              ),
+                              const Text(
+                                'Student',
+                                style: TextStyle(fontSize: 16),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          setState(() {
+                            _role = 'Teacher'; // Set role to Teacher when tapped
+                          });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                            color: _role == 'Teacher' ? Colors.blue : Colors.grey[300],
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(
+                              color: _role == 'Teacher' ? Colors.blue : Colors.grey,
+                            ),
+                          ),
+                          padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Radio<String>(
+                                value: 'Teacher',
+                                groupValue: _role,
+                                onChanged: (value) {
+                                  setState(() {
+                                    _role = value!;
+                                  });
+                                },
+                              ),
+                              const Text(
+                                'Teacher',
+                                style: TextStyle(fontSize: 16),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),*/
+                ),
+
                 const SizedBox(height: 10),
                 // username text-field
                 Padding(

@@ -72,14 +72,14 @@ class _LoginPageState extends State<LoginPage> {
                 const SizedBox(height: 10),
                 // Title
                 Text(
-                  '-Herbitect-',
+                  '-Herbitech-',
                   style: GoogleFonts.bebasNeue(
                     fontSize: 70,
                   ),
                 ),
                 const SizedBox(height: 10),
                 const Text(
-                  'Herbal Plant Detection',
+                  'Plant and Disease Detection App',
                   style: TextStyle(
                     fontSize: 20,
                   ),

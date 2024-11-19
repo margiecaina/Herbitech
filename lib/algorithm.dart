@@ -169,4 +169,3 @@ class Detection {
   Detection(this.className, this.confidence, this.boundingBox); // Constructor for the Detection class
 }
 
-// END OF APPLICATION

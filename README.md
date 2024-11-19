@@ -1,9 +1,6 @@
 # herbitect_protoype1
 
-DEVELOPMENT OF HERBITECH: A MOBILE APPLICATION FOR HERBAL PLANT HEALTH MONITORING IN DISEASE DETECTION AND REMEDIATION WITH IMAGE DETECTION ALGORITHM
-
-https://github.com/user-attachments/assets/46265b7c-2680-4fad-9ced-7d5aa7257f4f
-
+A new Flutter project.
 
 ## Getting Started
 
@@ -17,12 +14,3 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
-
-Group Members: 
-
-Sogoni, Denmark - Lead Programmer
-
-Caina, Margie - Business Analyst/Designer
-
-Ramos, Judiel - Researcher
-

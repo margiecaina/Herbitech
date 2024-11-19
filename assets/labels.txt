@@ -1,2 +1,4 @@
 0 Ampalaya
 1 Bawang
+2 Rust
+3 Powdery Mildew

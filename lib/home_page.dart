@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:herbitect_protoype1/bottom_navbar/scan.dart';
 
+import 'bottom_navbar/history.dart';
 import 'bottom_navbar/inventory.dart';
+import 'bottom_navbar/monitoring.dart';
 import 'bottom_navbar/profile.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,14 +16,14 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _currentIndex = 2;
+  int _currentIndex = 0;
 
   // Define the five pages
   final List<Widget> _pages = [
-    const HistoryPage(),
-    const MonitorPage(),
+    HistoryPage(),
+    MonitorPage(),
     ScanPage(),
-    const InventoryPage(),
+    InventoryPage(),
     const ProfilePage(),
   ];
 
@@ -32,7 +34,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.green.shade100,
         centerTitle: true,
         title: Text(
-          '-Herbitect-',
+          '-Herbitech-',
           style: GoogleFonts.bebasNeue(
             fontSize: 35,
           ),
@@ -63,6 +65,36 @@ class _HomePageState extends State<HomePage> {
                   FirebaseAuth.instance.signOut();
                 },
               ),
+              // Add About Us section in the Drawer
+              ListTile(
+                leading: const Icon(Icons.info),
+                title: const Text(
+                  'About Us',
+                  style: TextStyle(fontSize: 20),
+                ),
+                onTap: () {
+                  showAboutDialog(
+                    context: context,
+                    applicationName: 'Herbitech',
+                    applicationVersion: '1.0.0',
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10.0),
+                        child: Text(
+                          'Herbitech is a mobile application developed for a specific organization '
+                              'to leverage AI-driven image detection in providing real-time insights into herbal '
+                              'plants and diseases. Utilizing the YOLOv8 object detection algorithm, the app enables '
+                              'users to capture plant images and access detailed information on plant health, disease '
+                              'identification, and management strategies. While not a substitute for expert botanists, '
+                              'Herbitech supports the organization’s efforts to enhance early disease detection and promote '
+                              'sustainable practices.',
+                          style: TextStyle(fontSize: 16),
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              ),
             ],
           ),
         ),
@@ -82,7 +114,7 @@ class _HomePageState extends State<HomePage> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.history),
-            label: 'History',
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.monitor_heart_rounded),
@@ -101,36 +133,6 @@ class _HomePageState extends State<HomePage> {
             label: 'Profile',
           ),
         ],
-      ),
-    );
-  }
-}
-
-// First Page (History)
-class HistoryPage extends StatelessWidget {
-  const HistoryPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'History',
-        style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-      ),
-    );
-  }
-}
-
-// Second Page (Monitor)
-class MonitorPage extends StatelessWidget {
-  const MonitorPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Monitoring',
-        style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
       ),
     );
   }
