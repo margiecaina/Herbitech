@@ -1,4 +1,4 @@
-# herbitect_protoype1
+# herbitech_protoype1
 
 A new Flutter project.
 
