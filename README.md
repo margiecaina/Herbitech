@@ -1,5 +1,3 @@
-# herbitech_protoype1
-
 # Herbitech: Herbal Plant Detection and Disease Identification
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue) ![YOLO](https://img.shields.io/badge/YOLO-ObjectDetection-orange) ![Computer Vision](https://img.shields.io/badge/Computer_Vision-green)
