@@ -46,8 +46,7 @@ Herbitech is an AI-powered solution designed for detecting herbal plants, identi
 5. Fine-tuned hyperparameters to optimize detection performance  
 
 ## Results
-- Achieved ~80%-85% accuracy in herbal plant detection  
-- Achieved ~80%-85% accuracy in disease identification  
+- Achieved ~80%-85% accuracy in herbal plant detection and in disease identification  
 - Deployed the mobile and web app
 
 ## Future Work
