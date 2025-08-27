@@ -25,7 +25,7 @@ Herbitech is an AI-powered solution designed for detecting herbal plants, identi
 - Detection of 20+ herbal plant species  
 - Disease identification for 15+ plant diseases  
 - Real-time plant detection using YOLO  
-- High accuracy (~90%) in both plant and disease classification  
+- High accuracy (~80%-85%) in both plant and disease classification  
 
 ## Technologies / Tools
 - **Python** for implementation and data processing  
