@@ -17,7 +17,7 @@
 Herbitech is an AI-powered solution designed for detecting herbal plants, identifying herbal plant diseases, and supporting it's health monitoring. Using computer vision and deep learning techniques, the system can classify over 20 herbal plants and 15 different plant diseases.
 
 ## Objective
-- Detect and classify herbal plants accurately  
+- Detect and classify herbal plants  
 - Identify diseases affecting these plants  
 - Provide a reliable tool for herbal plant monitoring and health assessment  
 
